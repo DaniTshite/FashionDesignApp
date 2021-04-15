@@ -6,29 +6,64 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-</style>
+<link rel="stylesheet" href="home.css">
+<script type="text/javascript" src="home.js"></script>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
-<!-- Sidebar/menu -->
+
+<!-- Sidebar/menu-->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container w3-text-blue">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
     <img src="Pictures/dani.jpg" style="width:45%;" class="w3-round"><br><br>
-    <h4><b>PORTFOLIO</b></h4>
-    <p class="w3-text-blue"></p>
+    <h5><b>OVERVIEW</b></h5>
   </div>
   <div class="w3-bar-block">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-blue"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-blue"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-blue"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-blue"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-blue"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+    <a href="#" onclick="myFunction('Demo1')" class="w3-bar-item w3-button w3-padding w3-text-blue"><i class="fa fa-th-large fa-fw w3-margin-right"></i>SERVICES</a>
+    <div id="Demo1" class="w3-container w3-hide">
+      <a><p class="w3-bar-item w3-button  w3-text-blue">Interior Design</p></a>
+      <a><p class="w3-bar-item w3-button  w3-text-blue">Phototgraphy</p></a>
+      <a><p class="w3-bar-item w3-button  w3-text-blue">Arts</p></a>
+      <a><p class="w3-bar-item w3-button  w3-text-blue">Clothing Design</p></a>
+      <a><p class="w3-bar-item w3-button  w3-text-blue">Fashion Design</p></a>
+      <a><p class="w3-bar-item w3-button  w3-text-blue">Hair Styles</p></a>
+    </div>
+    <a href="#" onclick="" class="w3-bar-item w3-button w3-padding w3-text-blue"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT US</a>
+    <a href="#" onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button w3-padding w3-text-blue"><i class="fa fa-envelope fa-fw w3-margin-right"></i>LEAVE A MESSAGE</a>
+    <a href="#" onclick="" class="w3-bar-item w3-button w3-padding w3-text-blue"><i class="fa fa-phone fa-fw  w3-margin-right"></i>+27 74 22 55 282</a>
+    <a href="" class="w3-bar-item w3-text-blue w3-padding w3-button"><i class="fa fa-map-marker fa-fw w3-margin-right"></i> JOHANNESBURG, SA</a>
+  </div>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-border" style="max-width:800px">
+
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+        
+      </div>
+
+      <form autocomplete="off" class="w3-container" action="/action_page.php">
+        <div>
+          <h4 class="w3-center">LEAVE US A MESSAGE</h4>
+        </div>
+        <div class="w3-section">
+          <label><b>Name</b></label>
+          <input class="w3-input w3-border w3-margin-bottom  w3-hover-border-blue" type="text" placeholder="Enter Name" name="name" required><br>
+          <label><b>Email</b></label>
+          <input class="w3-input w3-border w3-margin-bottom w3-hover-border-blue" type="email" placeholder="Enter Email" name="email" required><br>
+          <label><b>Message</b></label>
+          <input class="w3-input w3-border w3-margin-bottom w3-hover-border-blue" type="text" placeholder="Enter Message" name="message" required>
+          <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit">Send</button>
+        </div>        
+      </form>
+
+      <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+        <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+      </div>
+
+    </div>
   </div>
 
 </nav>
@@ -41,109 +76,124 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   <!-- Header -->
   <header id="portfolio">
-    <a href="#"><img src="Pictures/olivia.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <a href="#"><img src="Pictures/dani.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container w3-text-blue w3-center">
-    <h1><b>KERA  FASHIONISTA</b></h1>
-    <div class="w3-section w3-bottombar w3-padding-16 w3-right-align">
-      <span class="w3-margin-right">Filter:</span>
-      <button class="w3-button w3-blue">ALL</button>
-      <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Home</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Clothing</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Hair</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
-    </div>
+      <h1><b>KERA  FASHIONISTA</b></h1>
+      <div class="w3-section w3-bottombar w3-padding-16 w3-right-align">
+        <span class="w3-margin-right">Filter:</span>
+        <button class="w3-button w3-blue">ALL</button>
+        <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Home</button>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Clothing</button>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Hair</button>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
+      </div>
     </div>
   </header>
 
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding">
+  
+<div class="myGrids">
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-animate-zoom" >
+      <div class="w3-third w3-container w3-margin-bottom" >
+        <img src="Pictures/olivia.jpg" alt="image" style="width:100%;cursor:pointer;max-height: 350px;" class="w3-hover-opacity" onclick="onClick(this)">
+        <div class="w3-container w3-white">
+          <p><b>Lorem Ipsum</b></p>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="Pictures/photo8.jpg" alt="image" style="width:100%;cursor:pointer;max-height: 350px;" class="w3-hover-opacity" onclick="onClick(this)">
+        <div class="w3-container w3-white">
+          <p><b>Lorem Ipsum</b></p>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <img src="Pictures/photo4.jpg" alt="image" style="width:100%;cursor:pointer;max-height: 350px;" class="w3-hover-opacity" onclick="onClick(this)">
+        <div class="w3-container w3-white">
+          <p><b>Lorem Ipsum</b></p>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="myGrids">
+
+    <!-- Second Photo Grid-->
+    <div class="w3-row-padding w3-animate-zoom">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="Pictures/photo10.jpg" alt="image" style="width:100%;cursor:pointer;max-height: 350px;" class="w3-hover-opacity" onclick="onClick(this)">
+        <div class="w3-container w3-white">
+          <p><b>Lorem Ipsum</b></p>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="Pictures/photo11.jpg" alt="image" style="width:100%;cursor:pointer;max-height: 350px;" class="w3-hover-opacity" onclick="onClick(this)">
+        <div class="w3-container w3-white">
+          <p><b>Lorem Ipsum</b></p>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <img src="Pictures/photo12.jpg" alt="image" style="width:100%;cursor:pointer;max-height: 350px;" class="w3-hover-opacity" onclick="onClick(this)">
+        <div class="w3-container w3-white">
+          <p><b>Lorem Ipsum</b></p>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        </div>
+      </div>
+    </div>
+</div>
+  
+<div class="myGrids">
+   <!-- Third Photo Grid-->
+  <div class="w3-row-padding w3-animate-zoom w3-display-container">
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="Pictures/olivia.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <img src="Pictures/photo27.jpg" alt="image" style="width:100%;cursor:pointer;max-height: 350px;" class="w3-hover-opacity" onclick="onClick(this)">
       <div class="w3-container w3-white">
         <p><b>Lorem Ipsum</b></p>
         <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="Pictures/photo8.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <img src="Pictures/photo23.jpg" alt="image" style="width:100%;cursor:pointer;max-height: 350px;" class="w3-hover-opacity" onclick="onClick(this)">
       <div class="w3-container w3-white">
         <p><b>Lorem Ipsum</b></p>
         <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
       </div>
     </div>
     <div class="w3-third w3-container">
-      <img src="Pictures/photo4.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <img src="Pictures/photo21.jpg" alt="image" style="width:100%;cursor:pointer;max-height: 350px;" class="w3-hover-opacity" onclick="onClick(this)">
       <div class="w3-container w3-white">
         <p><b>Lorem Ipsum</b></p>
         <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <a href="#" class="w3-padding-16 w3-bar-item w3-button w3-xlarge w3-display-left w3-hover-blue" onclick="plusDivs(-1)">«</a>
+        <a href="#" class="w3-padding-16 w3-bar-item w3-button w3-xlarge w3-display-right w3-hover-blue" onclick="plusDivs(1)">»</a>
       </div>
     </div>
   </div>
+</div>
+  
 
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="Pictures/photo10.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="Pictures/photo11.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="Pictures/photo12.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Third Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="Pictures/photo27.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="Pictures/photo23.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="Pictures/photo21.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
+<!-- Modal for Above Photo Grids -->
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+      <img id="img01" style="width:100%;max-height:600px;">
     </div>
   </div>
 
   <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
+  <div class="w3-display-container w3-padding-32">
     <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-blue">«</a>
-      <a href="#" class="w3-bar-item w3-blue w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-blue">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-blue">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-blue">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-blue">»</a>
+      <a href="#" class="w3-bar-item w3-button w3-xlarge w3-display-left w3-hover-blue" onclick="plusDivs(-1)">«</a>
+      <a href="#" class="w3-bar-item w3-button w3-xlarge w3-display-right w3-hover-blue" onclick="plusDivs(1)">»</a>
     </div>
   </div>
 
-  <!-- Images of Me -->
+  <!-- Images -->
   <div class="w3-row-padding w3-padding-16" id="about">
     <div class="w3-col m6">
       <img src="Pictures/photo.jpg" alt="Me" style="width:100%">
@@ -157,49 +207,69 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <h4><b>About Me</b></h4>
     <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
     <hr>
-
-  </div>
-
-  <div class="w3-row-padding w3-padding-16" id="about">
-    <div class="w3-col m6">
-      <img src="Pictures/photo32.jpg" alt="Me" style="width:100%">
-    </div>
-    <div class="w3-col m6">
-      <img src="Pictures/photo33.jpg" alt="Me" style="width:100%">
-    </div>
   </div>
 
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <h4><b>About Me</b></h4>
-    <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-    <hr>
+    <h4 class="w3-center w3-text-blue"><b>TESTIMONIALS ...</b></h4>
+    <div class="mySlides">
+      <div class="w3-panel w3-light-grey w3-leftbar w3-border-grey w3-animate-right">
+        <p class="w3-xlarge w3-serif"><i>"Make it as simple as possible, but not simpler."</i></p>
+        <p class="w3-text-blue w3-right-align w3-xlarge w3-serif">Albert Einstein</p>
+      </div>
+    </div>
 
+    <div class="mySlides">
+      <div class="w3-panel w3-light-grey w3-leftbar w3-border--grey w3-animate-right">
+        <p class="w3-xlarge w3-serif"><i>"Make it as simple as possible, but not simpler."</i></p>
+        <p class="w3-text-blue w3-right-align w3-xlarge w3-serif">Dani Tshite</p>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div class="w3-panel w3-light-grey w3-leftbar w3-border-grey w3-animate-right">
+        <p class="w3-xlarge w3-serif"><i>"Make it as simple as possible, but not simpler."</i></p>
+        <p class="w3-text-blue w3-right-align w3-xlarge w3-serif">Martin Luther king Jr.</p>
+      </div>
+    </div>
+    <hr class="w3-grey">
   </div>
-
+   
   <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-blue w3-center w3-large">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p>Powered by <a href="#" target="_blank" class="w3-hover-text-green">danibytes</a></p>
+  
+  <footer class="w3-container w3-padding-16 w3-light-grey ">
+    <div class="w3-topbar w3-light-grey w3-margin-bottom">
+
+    </div>
+    <div class="w3-container w3-third w3-left-align">
+          <p class="w3-text-black"><i class="fa fa-map-marker fa-fw w3-text-black w3-margin-right"></i> JOHANNESBURG, SA</p>
+          <p class="w3-text-black"><i class="fa fa-phone fa-fw w3-text-black  w3-margin-right"></i> PHONE : +27 74 22 55 282</p>
+          <p class="w3-text-black"><i class="fa fa-envelope fa-fw w3-text-black  w3-margin-right"> </i> EMAIL : dantshites@gmail.com</p>
+          <a href="#"><p class="w3-text-black"><i class="fa fa-facebook-official w3-text-black w3-margin-right"></i></p></a>
+          <a href="#"><p class="w3-text-black"><i class="fa fa-instagram w3-text-black w3-margin-right"></i></p></a>
+        </div>
+        <div class="w3-container w3-third">
+          
+          <p>Privacy Policy</p>
+          <p>Terms</p>
+          <p>Learn More</p>
+          <p>Help ...</p>
+        </div>
+        <div class="w3-container w3-third">
+        
+          <p>Users</p>
+          <p>Active</p>
+          <p>Geo</p>
+          <p>Interests</p>
+        </div>
+      </div>
 </footer>
 
-
-
 <script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
+    var myIndex = 0;
+    carousel();
+    
+    var slideIndex = 1;
+    showDivs(slideIndex);
 </script>
 
 </body>
